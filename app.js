@@ -41,7 +41,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('<h1 style="color:red; font-size:70; margin:20% auto; text-align:center;">Mim is my herat and my Crush and my bad grails!</h1>')
 })
 
 app.listen(port, () => {
