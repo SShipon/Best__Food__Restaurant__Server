@@ -22,7 +22,7 @@ async function run() {
     await client.connect();
     // Send a ping to confirm a successful connection
 
-    const restaurantCollection = client.db("My_users").collection("shipon")
+    const restaurantCollection = client.db("restaurant").collection("productData")
     
        // users get data client site
   app.get('/users', async(req, res)=>{
@@ -30,6 +30,12 @@ async function run() {
     const result = await query.toArray()
     res.send(result)
     
+})
+
+app.post('/product', async(req, res)=>{
+  const product = restaurantCollection.insertOne()
+  let result = await collection.findOne(product);
+  res.send(result)
 })
 
   } finally {
